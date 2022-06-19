@@ -6,7 +6,12 @@ This is for the 2nd problem.
 
 The second problem is the drop zone has been placed all puzzles, and buttons of other puzzles are only for switching to specific puzzle pictures. However, the puzzles from the last game are still remained on the puzzle board unchanged. There are several attempt to fix this problem, in term of removing child on the drop zone, and move the puzzles pictures back to the original drag zone when any puzzle buttons were clicked.
 
-Research of remove child, if function for counting elementchild and return, nodechild, true/ false and let function have been explored.
+Research of remove child, if function for counting elementchild and return, nodechild, true/ false and let function have been explored. The main focus I was on the "theThumbnails" and "gameBoard" because it was either change some javascript from the gameBoard or the puzzle buttons. Also, I tried to add a dragZone tag to see if it helped this problem. 
+
+Evenetually, still I stick with the plan to see what can I do on the gameboard where is the finished puzzles stay. Some notes from Trevor to mentioned that remove child, I tried remove all children function that worked, but it even removed the dotted line. So, it is a half way through, the other remove child didn't work for adding parent and child name. Also, there are rename parent/ child name on js file that can use. I also try to add a funtion and extend the "theThumbnails" handling for the move of puzzle back to drag zone, but failed. 
+
+Finaly, I try to use the same if function from the first problem, to experiment if the childcount on gameboard is greater than 0, any one puzzle on the board, then users can click the 4 puzzle buttons to reset it. To do so, I set a false function for that, and input the if gameBoard.childElementCount > 0, then it return to true. Well, not succeed but it doesn't have error, seems to... not too bad!
+
 
 
 :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth:  :kissing_smiling_eyes: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth:
