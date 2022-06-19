@@ -1,12 +1,13 @@
 # Multimedia Authoring 2 - Crushing Bugs Assignment
 
-This is for the 1st debugging problem.
+This is for the 2nd problem.
 
-1. There are more than one puzzles can be dragged and dropped into a drop zone
+2. The puzzle game ends with all the puzzles in the drop zone on reset or choosing a new puzzle
 
-The problem is four puzzles can be moved into any one of the drop zone without limit. I checked the debugger from "inspect", there is one calls "childElementCount" that affects the drop zone container. The drop zone didn't set a limit of "childElementCount" which leads more than one puzzles can be dropped into there.
+The second problem is the drop zone has been placed all puzzles, and buttons of other puzzles are only for switching to specific puzzle pictures. However, the puzzles from the last game are still remained on the puzzle board unchanged. There are several attempt to fix this problem, in term of removing child on the drop zone, and move the puzzles pictures back to the original drag zone when any puzzle buttons were clicked.
 
-Therefore, we can add a if function to set the "childElementCount" condition, and makes drop zone rejects to drop by count greater than 0. The solution is similar to the if (!targetAudio) { return} example from the last class, if the childElementCount is greater than 0, means that the drop zone already has 1 puzzle, then the function will take no action afterward.
+Research of remove child, if function for counting elementchild and return, nodechild, true/ false and let function have been explored.
+
 
 :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth:  :kissing_smiling_eyes: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth: :no_mouth:
 

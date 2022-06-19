@@ -6,9 +6,10 @@
 	// JS holds these in memory so that it can accessthem later (these are elements in the html)
 
 	let theThumbnails = document.querySelectorAll("#buttonHolder img"),
-	gameBoard = document.querySelector(".puzzle-board");
+	gameBoard = document.querySelector(".puzzle-board"),
 	pzlPieces = document.querySelectorAll(".puzzle-pieces img"),
-	dropZones = document.querySelectorAll(".drop-zone");
+	dropZones = document.querySelectorAll(".drop-zone"),
+	dragZone = document.querySelectorAll(".puzzle-pieces");
 
 	// let student = document.querySelector("#students") just one thing
 
@@ -45,20 +46,20 @@
 	
 		});
 
-		//let element = gameBoard;
-		//while (element.firstChild) {
-		//	element.removeChild(element.firstChild);
-		//} //really removed all children, need that dotted lines tho
+		let element = gameBoard;
+		while (element.firstChild) {
+			element.removeChild(element.firstChild);
+		} //really removed all children, need that dotted lines tho
 
-	
-		function allowReset() {
-			let pzlPieces
-
-		
-		}
-
-		
+		let allowStart = false;
+			if (!gameBoard.childElementCount > 0) {
+				return
+			}
+			allowStart = true;
 	}
+		
+	
+
 
 
 	function allowDrag() {
@@ -105,7 +106,7 @@
 	
 
 	// add event handling here
-	theThumbnails.forEach(thumb => thumb.addEventListener("click", changeImageSet);
+	theThumbnails.forEach(thumb => thumb.addEventListener("click", changeImageSet));
 	pzlPieces.forEach(piece => piece.addEventListener("dragstart", allowDrag));
 	
 	
